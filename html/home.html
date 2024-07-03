@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+
+            color: #333;
+            background-color: #ddd
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        .sm {
+            font-size: medium;
+        }
+
+        .container {
+            margin: 180px 80px ;
+            height: 350px;
+            width: 150px;
+            display: grid;
+            grid-template-rows: 133px 133px;
+            grid-template-columns: 133px 133px 133px 133px;
+            row-gap: 68px;
+            column-gap: 40px;
+        }
+
+        .item {
+            background-color: lightblue;
+            height: 122px;
+            width: 122px;
+            font-size: 20px;
+        }
+        .col-0{
+        margin-top: -180px;
+        margin-left: -80px ;
+        
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="col-0" style="width:938%">
+        <img class="mySlides" src="photo/2.jpg" style="width:100%">
+        <img class="mySlides" src="photo/3.jpg" style="width:100%">
+        <img class="mySlides" src="photo/9.png" style="width:100% ;height:300px" >
+      </div>
+      <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 5 seconds
+        }
+        </script>
+
+   
+
+    <div class="container">
+        <div class="item"><a href="home.php?val=de"><b>&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/1.png" alt="not"
+                        height="70px" width="70px"><br>&nbsp;&nbsp;&nbsp;&nbsp;Deposit</b></a></div>
+
+        <div class="item"> <a href="home.php?val=mt"><b>&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/2.png" alt="not"
+                        height="70px" width="70px"><br>&nbsp;&nbsp;&nbsp;&nbsp;To Mobile</b></a></div>
+
+        <div class="item"><a href="home.php?val=wi"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/3.png" alt="not"
+                        height="70px" width="70px"><br>&nbsp;&nbsp;&nbsp;&nbsp;Withdraw</b></a></div>
+
+        <div class="item"><a href="home.php?val=tr"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/4.png" alt="not"
+                        height="70px" width="70px"><br>&nbsp;&nbsp;&nbsp;To Account</b></a></div>
+
+        <div class="item"><a class=sm href="home.php?val=detail"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/5.png" alt="not"
+            height="70px" width="80px"><br>&nbsp;&nbsp;&nbsp;Account Detail</b></a></div>
+
+        <div class="item"><a class=sm href="home.php?val=st"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/6.png" alt="not"
+            height="70px" width="70px"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Statement</b></a></div>
+
+        <div class="item"><a href="home.php?val=tran"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/9.png" alt="not"
+            height="70px" width="70px"><br>&nbsp;&nbsp;Transaction</b></a></div>
+
+        <div class="item"><a class=sm href="home.php?val=cb"><b>&nbsp;&nbsp;&nbsp;&nbsp;<img src="icon/8.png" alt="not"
+                        height="70px" width="70px"><br>&nbsp;&nbsp;&nbsp;Check Balance</b></a></div>
+    </div>
+
+
+
+</body>
+
+</html>
